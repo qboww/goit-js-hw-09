@@ -2,34 +2,41 @@ const formEl = document.querySelector('.feedback-form');
 const emailInputEl = document.querySelector('.input-email');
 const messageInputEl = document.querySelector('.input-message');
 
-const storedData = JSON.parse(localStorage.getItem('feedback-form-state'));
+const STORAGE_KEY = 'feedback-form-state';
 
-if (storedData) {
-  emailInputEl.value = storedData.email || '';
-  messageInputEl.value = storedData.message || '';
+const localStorage = JSON.parse(localStorage.getItem(STORAGE_KEY));
+
+if (localStorage) {
+  emailInputEl.value = localStorage.email || '';
+  messageInputEl.value = localStorage.message || '';
 }
 
-formEl.addEventListener('input', () => {
+const getTrimmedValue = value => value.value.trim();
+
+const handleFormInput = () => {
   const currentData = {
-    email: emailInputEl.value.trim(),
-    message: messageInputEl.value.trim(),
+    email: getTrimmedValue(emailInputEl),
+    message: getTrimmedValue(messageInputEl),
   };
 
-  localStorage.setItem('feedback-form-state', JSON.stringify(currentData));
-});
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(currentData));
+};
 
-formEl.addEventListener('submit', event => {
+const handleFormSubmit = event => {
   event.preventDefault();
 
-  const email = emailInputEl.value.trim();
-  const message = messageInputEl.value.trim();
+  const email = getTrimmedValue(emailInputEl);
+  const message = getTrimmedValue(messageInputEl);
 
   if (email && message) {
     console.log({ email, message });
 
-    localStorage.removeItem('feedback-form-state');
+    localStorage.removeItem(STORAGE_KEY);
 
     emailInputEl.value = '';
     messageInputEl.value = '';
   }
-});
+};
+
+formEl.addEventListener('input', handleFormInput);
+formEl.addEventListener('submit', handleFormSubmit);
