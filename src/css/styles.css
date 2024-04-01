@@ -1,6 +1,6 @@
 @import url('./reset.css');
 @import url('./globals.css');
-@import url('./index.css');
 
-@import url('./gallery.css');
-@import url('./form.css');
+@import url('./pages/index.css');
+@import url('./pages/gallery.css');
+@import url('./pages/form.css');
