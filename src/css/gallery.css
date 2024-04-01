@@ -17,8 +17,8 @@
 
 .gallery-link {
   display: block;
-  width: 360px;
-  height: 200px;
+  max-width: 360px;
+
 }
 
 .gallery-image {

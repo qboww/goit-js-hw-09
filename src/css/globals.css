@@ -18,5 +18,8 @@ body {
 }
 
 .go-back-wrapper{
-  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin: 24px;
 }
