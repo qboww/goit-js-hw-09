@@ -4,11 +4,11 @@ const messageInputEl = document.querySelector('.input-message');
 
 const STORAGE_KEY = 'feedback-form-state';
 
-const localStorage = JSON.parse(localStorage.getItem(STORAGE_KEY));
+const localData = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
-if (localStorage) {
-  emailInputEl.value = localStorage.email || '';
-  messageInputEl.value = localStorage.message || '';
+if (localData) {
+  emailInputEl.value = localData.email || '';
+  messageInputEl.value = localData.message || '';
 }
 
 const getTrimmedValue = value => value.value.trim();
