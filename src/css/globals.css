@@ -1,0 +1,22 @@
+:root {
+  --font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  background-color: #323232;
+  line-height: 1.5;
+}
+
+.go-back{
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.go-back-wrapper{
+  margin: 15px;
+}
