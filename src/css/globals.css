@@ -11,13 +11,13 @@ body {
   line-height: 1.5;
 }
 
-.go-back{
+.go-back {
   text-decoration: none;
   color: white;
   font-size: 18px;
 }
 
-.go-back-wrapper{
+.go-back-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: start;
