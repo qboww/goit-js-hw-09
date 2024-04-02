@@ -1,6 +1,6 @@
 import SimpleLightbox from 'simplelightbox/dist/simple-lightbox.esm';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-import { images } from './partials/images-array.js';
+import { images } from './images-array.js';
 
 const galleryContainer = document.querySelector('.gallery');
 
