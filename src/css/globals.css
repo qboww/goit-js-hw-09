@@ -9,6 +9,8 @@ body {
   background-color: #fafafa;
   background-color: #323232;
   line-height: 1.5;
+
+  animation: fadeIn ease-in-out 0.25s;
 }
 
 .go-back {
